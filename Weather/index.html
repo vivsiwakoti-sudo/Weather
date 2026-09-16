@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>USA Weather Forecast</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>🌤️ USA Weather Forecast</h1>
+      <p class="subtitle">Search any city in the United States</p>
+    </header>
+
+    <form id="search-form" autocomplete="off">
+      <input
+        type="text"
+        id="city-input"
+        placeholder="Enter a US city (e.g. Austin, TX)"
+        required
+      />
+      <button type="submit">Search</button>
+    </form>
+
+    <ul id="suggestions" class="suggestions hidden"></ul>
+
+    <div class="unit-toggle">
+      <button type="button" id="unit-f" class="unit-btn active">°F</button>
+      <button type="button" id="unit-c" class="unit-btn">°C</button>
+    </div>
+
+    <div id="status" class="status hidden"></div>
+
+    <section id="results" class="results hidden">
+      <div class="current-weather">
+        <h2 id="location-name"></h2>
+        <p id="location-detail" class="location-detail"></p>
+        <div class="current-main">
+          <span id="current-temp" class="current-temp"></span>
+          <div class="current-icon" id="current-icon"></div>
+        </div>
+        <p id="current-desc" class="current-desc"></p>
+        <div class="current-stats">
+          <div><span>Feels like</span><strong id="feels-like"></strong></div>
+          <div><span>Humidity</span><strong id="humidity"></strong></div>
+          <div><span>Wind</span><strong id="wind"></strong></div>
+        </div>
+      </div>
+
+      <h3 class="forecast-title">7-Day Forecast</h3>
+      <div id="forecast" class="forecast"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
